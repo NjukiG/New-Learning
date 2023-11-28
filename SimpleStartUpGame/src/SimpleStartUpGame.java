@@ -4,6 +4,9 @@ import static java.lang.Math.random;
 
 public class SimpleStartUpGame {
     public static void main(String[] args) {
+
+        System.out.println("Welcome to KILL A SILLY STARTUP game!");
+        System.out.println("We will make guesses of numbers it takes to drown the startup!");
         int numOfGuesses = 0;
 
         GameHelper helper = new GameHelper();

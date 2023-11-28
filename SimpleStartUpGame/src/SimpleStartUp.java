@@ -1,4 +1,7 @@
+import java.util.ArrayList;
+
 public class SimpleStartUp {
+
     private int[] locationCells;
     private int numOfHits = 0;
 
@@ -25,3 +28,28 @@ public class SimpleStartUp {
         return result;
     }
 }
+
+//    ArrayList<String> locationCells;
+//
+//    public void setLocationCells(ArrayList<String> locs) {
+//        locationCells = locs;
+//    }
+//
+//    public String checkYouself(String userInput) {
+//        String result = "Miss";
+//
+//        int index = locationCells.indexOf(userInput);
+//
+//        if (index >= 0) {
+//            locationCells.remove(index);
+//
+//            if (locationCells.isEmpty()) {
+//                result = "Killed the startup";
+//            } else {
+//                result = "Hit the startup!";
+//            }
+//        }
+//
+//        System.out.println(result);
+//        return result;
+//    }
