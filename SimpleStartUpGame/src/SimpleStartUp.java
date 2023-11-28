@@ -2,22 +2,22 @@ public class SimpleStartUp {
     private int[] locationCells;
     private int numOfHits = 0;
 
-    public void setLocationCells(int[] locs){
+    public void setLocationCells(int[] locs) {
         locationCells = locs;
     }
 
-    public String checkYourself(int guess){
+    public String checkYourself(int guess) {
         String result = "Miss";
 
-        for(int cell: locationCells){
-            if(guess == cell){
+        for (int cell : locationCells) {
+            if (guess == cell) {
                 result = "Hit the startup!";
                 numOfHits++;
                 break;
             }
         }
 
-        if(numOfHits == locationCells.length){
+        if (numOfHits == locationCells.length) {
             result = "Killed the startup";
         }
 
