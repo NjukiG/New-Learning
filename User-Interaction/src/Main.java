@@ -25,7 +25,7 @@ public class Main {
             // Prompt the user for a double value
             System.out.println("Please enter the price of how much " + quantity + " " + fruit + " will cost:");
             double price = prompt.nextDouble();
-            
+
             System.out.println(quantity + " " + fruit + " costs $" + price);
         }catch (InputMismatchException e){
             System.out.println("Your inputs are wrong!");
