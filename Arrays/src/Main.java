@@ -15,10 +15,10 @@ public class Main {
             names.add(name);
         }
 
-        System.out.println("You have entered the following names.");
-        
-        for (String item : names) {
 
+        System.out.println("You have entered the following names.");
+
+        for (String item : names) {
             System.out.println(item);
         }
 
