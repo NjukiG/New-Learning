@@ -2,27 +2,28 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Garage {
-    List<String> cars;
-
+    private List<Car> cars;
     private String garageName;
 
     public Garage(String garageName){
         this.garageName = garageName;
+        this.cars = new ArrayList<>();
     }
 
-    public void setCars(List cars) {
-        this.cars = cars;
+    public void addCar(Car car){
+        cars.add(car);
     }
 
-    public List getCars() {
-        return cars;
+    public void removeCar(Car car){
+        cars.remove(car);
     }
 
+    public List<Car> listCars(){
+        return new ArrayList<>(cars);
+    }
 
     @Override
     public String toString(){
         return garageName;
     }
-
-
 }
