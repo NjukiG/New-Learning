@@ -9,11 +9,11 @@ public class Library {
         this.books = new ArrayList<>();
     }
 
-    public List<Book> getBooks(){
+    public List<Book> getBooks() {
         return books;
     }
 
-    public  void addBook(Book book) {
+    public void addBook(Book book) {
         // Write code here
         boolean add = books.add(book);
         System.out.println(book + "Added");
@@ -21,7 +21,7 @@ public class Library {
 
     public boolean displayBooks() {
         // Write code here
-        for(Book book : books){
+        for (Book book : books) {
             System.out.println(book.getTitle());
         }
         return false;
@@ -29,8 +29,8 @@ public class Library {
 
     public Book findBook(String title) {
         // Write code here
-        for(Book book: books){
-            if(book.getTitle().equalsIgnoreCase(title)){
+        for (Book book : books) {
+            if (book.getTitle().equalsIgnoreCase(title)) {
                 return book;
             }
         }
