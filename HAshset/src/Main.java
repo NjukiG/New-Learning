@@ -54,7 +54,6 @@ public class Main {
 
     public static void showAllCities(GlobalDirectory globalDirectory) {
         Set<String> allCities = globalDirectory.getCities();
-
         for (String city : allCities) {
             System.out.println(city);
         }
