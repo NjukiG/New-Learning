@@ -32,7 +32,11 @@ public class Main {
         groceries.add(cereals);
         groceries.add(otherItems);
 
-        System.out.println(groceries);
+        for(ArrayList grocery : groceries){
+            for(Object item : grocery){
+                System.out.println(item);
+            }
+        }
 
     }
 }
