@@ -22,8 +22,8 @@ public class Main {
         // Write your code here!
         input = input.toLowerCase();
         int totalEs = 0;
-        for(int i =0; i < input.length();i++){
-            if(input.charAt(i) == 'e'){
+        for (int i = 0; i < input.length(); i++) {
+            if (input.charAt(i) == 'e') {
                 totalEs++;
             }
         }
@@ -34,9 +34,9 @@ public class Main {
         // Write your code here!
         input = input.toLowerCase();
 
-        for(int i = 0; i < input.length();i++){
-            if(input.charAt(i) == 'e'){
-               input = input.replace('e', ' ');
+        for (int i = 0; i < input.length(); i++) {
+            if (input.charAt(i) == 'e') {
+                input = input.replace('e', ' ');
             }
         }
         return input;
