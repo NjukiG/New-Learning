@@ -21,7 +21,7 @@ public class Hotel {
     public String addReservation(Reservation reservation) {
         // Write code here
         if(reservation.getNumberOfNights() <= 0){
-            return "Sorry, " + reservation.getGuestName() + ". Your reservation is invalid and cannot be added";
+            return "Sorry, " + reservation.getGuestName() + ". Your reservation is invalid and cannot be added.";
         }
         reservations.add(reservation);
 
@@ -30,7 +30,6 @@ public class Hotel {
                 .plusDays(lastReservation.getNumberOfNights())
                 .format(DateTimeFormatter.ofPattern("MM/dd/yyyy HH:mm"));
 
-        return "Welcome, " + reservation.getGuestName() + ". Your reservation is set! Check-out is at " + checkoutDateTime;
-//        return "";
+        return "Welcome, " + reservation.getGuestName() + ". Your reservation is set! Check-out is at " + checkoutDateTime + ".";
     }
 }

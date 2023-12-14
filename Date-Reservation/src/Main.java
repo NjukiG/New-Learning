@@ -21,7 +21,7 @@ public class Main {
 
         System.out.println(serena.addReservation(testReservation3));
 
-        Reservation testReservation4 = new Reservation("Jerry Gergich", "10/10/2022 11:45", -2);
+        Reservation testReservation4 = new Reservation("George NJuki", "10/10/2022 11:45", -2);
 
         System.out.println(serena.addReservation(testReservation4));
     }
