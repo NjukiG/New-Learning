@@ -11,12 +11,9 @@ public class Reservation {
     public Reservation(String name, String checkin, int numberOfNights) {
         // Write the constructor code here
         this.name = name;
-//        this.checkin = DateTimeFormatter.ofPattern("MM/dd/uuuu HH:mm");
         this.numberOfNights = numberOfNights;
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy HH:mm");
         this.checkin = LocalDateTime.parse(checkin, formatter);
-
-
 
     }
 
