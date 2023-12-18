@@ -12,7 +12,8 @@ public class Main {
 //        for(Status status: Status.values()){
 //            System.out.println(status);
 //        };
-        Status status = Status.Success;
+        Status status = Status.Failed;
+
 
         switch (status){
             case Running:
