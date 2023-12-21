@@ -71,6 +71,23 @@ public class JpaCreate {
         book4.setPages(176);
         book4.setPublicationDate(LocalDate.of(2014, 2, 18));
 
+        // Publisher - Owner one-to-one relationship
+        publisher1.setAddress(address1);
+        publisher2.setAddress(address2);
+
+        // Book > Publisher many-to-one relationship
+        book1.setPublisher(publisher1);
+        book2.setPublisher(publisher1);
+        book3.setPublisher(publisher2);
+        book4.setPublisher(publisher1);
+
+        // Author <> Book many-to-many relationship
+        author1.addBook(book1);
+        author2.addBook(book1);
+        author3.addBook(book2);
+        author3.addBook(book4);
+        author4.addBook(book3);
+
         // create EntityManager
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("example");
         EntityManager entityManager = entityManagerFactory.createEntityManager();

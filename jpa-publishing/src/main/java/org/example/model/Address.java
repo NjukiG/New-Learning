@@ -1,9 +1,6 @@
 package org.example.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Address {
@@ -21,8 +18,19 @@ public class Address {
     @Column(columnDefinition = "varchar(100) default 'United States'")
     private String country = "United States";
 
+    @OneToOne(mappedBy = "address")
+    private Publisher publisher;
+
     //getters, setters, toString
 
+
+    public Publisher getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(Publisher publisher) {
+        this.publisher = publisher;
+    }
 
     public void setId(int id) {
         this.id = id;

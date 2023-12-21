@@ -2,6 +2,8 @@ package org.example.model;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class Book {
@@ -23,7 +25,33 @@ public class Book {
     @Column(columnDefinition = "integer default 1")
     private int edition = 1;
 
+
+    @ManyToOne
+    private Publisher publisher;   // foreign key publisher_id
+
+
+    @ManyToMany(mappedBy="books")
+    private Set<Author> authors = new HashSet<>();
+
+
     //getters, setters, toString
+
+    public void addAuthor(Author author) {
+        authors.add(author);
+        author.addBook(this); //update the owning side
+    }
+
+    public Set<Author> getAuthors() {
+        return authors;
+    }
+
+    public Publisher getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(Publisher publisher) {
+        this.publisher = publisher;
+    }
 
 
     public int getId() {
